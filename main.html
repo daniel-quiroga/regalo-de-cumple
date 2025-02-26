@@ -223,9 +223,131 @@
       animation-delay: 0.6s;
     }
     
+    .bird-illustration:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+    
+    .bird-illustration:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+    
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
+    }
+    
+    /* Confetti */
+    .confetti-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 0;
+      opacity: 0.7;
+      animation-name: confetti-fall, confetti-shake;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running;
+    }
+    
+    .confetti:nth-child(1) {
+      left: 10%;
+      animation-duration: 3s, 2.5s;
+      animation-delay: 0s, 0s;
+      background-color: #f44336;
+    }
+    
+    .confetti:nth-child(2) {
+      left: 20%;
+      animation-duration: 4s, 3s;
+      animation-delay: 1s, 1s;
+      background-color: #e91e63;
+    }
+    
+    .confetti:nth-child(3) {
+      left: 30%;
+      animation-duration: 3.5s, 2.7s;
+      animation-delay: 1.5s, 1s;
+      background-color: #9c27b0;
+    }
+    
+    .confetti:nth-child(4) {
+      left: 40%;
+      animation-duration: 2.8s, 3.2s;
+      animation-delay: 0.5s, 1.5s;
+      background-color: #673ab7;
+    }
+    
+    .confetti:nth-child(5) {
+      left: 50%;
+      animation-duration: 3.2s, 2.9s;
+      animation-delay: 1.2s, 0.7s;
+      background-color: #3f51b5;
+    }
+    
+    .confetti:nth-child(6) {
+      left: 60%;
+      animation-duration: 3.7s, 3.1s;
+      animation-delay: 0.8s, 1.2s;
+      background-color: #2196f3;
+    }
+    
+    .confetti:nth-child(7) {
+      left: 70%;
+      animation-duration: 3.1s, 2.8s;
+      animation-delay: 0.3s, 0.9s;
+      background-color: #03a9f4;
+    }
+    
+    .confetti:nth-child(8) {
+      left: 80%;
+      animation-duration: 3.8s, 3.4s;
+      animation-delay: 1.4s, 0.4s;
+      background-color: #00bcd4;
+    }
+    
+    .confetti:nth-child(9) {
+      left: 90%;
+      animation-duration: 3.3s, 3s;
+      animation-delay: 0.7s, 1.7s;
+      background-color: #009688;
+    }
+    
+    .confetti:nth-child(10) {
+      left: 95%;
+      animation-duration: 3.6s, 3.2s;
+      animation-delay: 1.1s, 0.2s;
+      background-color: #4caf50;
+    }
+    
+    @keyframes confetti-fall {
+      0% {
+        top: -10%;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 100%;
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes confetti-shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(5px);
+      }
     }
     
     .signature {
@@ -374,6 +496,18 @@
       animation-delay: 2s;
     }
     
+    .bird-flying:nth-child(7) {
+      top: 30%;
+      animation-duration: 9s;
+      animation-delay: 1s;
+    }
+    
+    .bird-flying:nth-child(8) {
+      top: 50%;
+      animation-duration: 14s;
+      animation-delay: 3s;
+    }
+    
     @keyframes bird-fly {
       0% { left: -5%; }
       100% { left: 105%; }
@@ -389,10 +523,63 @@
       border-radius: 50%;
       box-shadow: 0 0 20px #FFD700;
     }
+    
+    .bolivia-flag {
+      position: absolute;
+      width: 40px;
+      height: 24px;
+      background: linear-gradient(to bottom, #ce1126 33%, #fcd116 33%, #fcd116 66%, #078930 66%);
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    
+    .bolivia-flag:nth-child(1) {
+      top: 10px;
+      left: 10px;
+      transform: rotate(-10deg);
+    }
+    
+    .bolivia-flag:nth-child(2) {
+      top: 10px;
+      right: 60px;
+      transform: rotate(10deg);
+    }
+    
+    .bolivia-flag:nth-child(3) {
+      bottom: 80px;
+      left: 10px;
+      transform: rotate(-5deg);
+    }
+    
+    .bolivia-flag:nth-child(4) {
+      bottom: 80px;
+      right: 10px;
+      transform: rotate(5deg);
+    }
+    
+    .bolivia-emblem {
+      position: absolute;
+      font-size: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   </style>
 </head>
 <body>
   <div class="card">
+    <div class="confetti-container">
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+    </div>
     <div class="card-top">
       <div class="birds-container">
         <div class="bird">🐦</div>
@@ -402,6 +589,9 @@
         <div class="bird">🦜</div>
         <div class="bird">🦤</div>
         <div class="bird">🪽</div>
+        <div class="bird">🦢</div>
+        <div class="bird">🦃</div>
+        <div class="bird">🐓</div>
         <div class="cloud"></div>
         <div class="cloud"></div>
       </div>
@@ -426,6 +616,8 @@
           <div class="bird-illustration">🦢</div>
           <div class="bird-illustration">🦚</div>
           <div class="bird-illustration">🦩</div>
+          <div class="bird-illustration">🦜</div>
+          <div class="bird-illustration">🦅</div>
         </div>
         
         <div class="nature-scene">
@@ -448,6 +640,14 @@
           </div>
           <div class="bird-flying">🐦</div>
           <div class="bird-flying">🦅</div>
+          <div class="bird-flying">🦜</div>
+          <div class="bird-flying">🦤</div>
+          <div class="bolivia-flag">
+            <div class="bolivia-emblem">🇧🇴</div>
+          </div>
+          <div class="bolivia-flag">
+            <div class="bolivia-emblem">🇧🇴</div>
+          </div>
         </div>
         
         <div class="gift-details">
